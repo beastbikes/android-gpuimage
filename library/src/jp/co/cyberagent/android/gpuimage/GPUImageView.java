@@ -16,13 +16,13 @@
 
 package jp.co.cyberagent.android.gpuimage;
 
+import java.io.File;
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
-
-import java.io.File;
 
 public class GPUImageView extends GLSurfaceView {
 
@@ -138,4 +138,13 @@ public class GPUImageView extends GLSurfaceView {
                                final GPUImage.OnPictureSavedListener listener) {
         mGPUImage.saveToPictures(folderName, fileName, listener);
     }
+    
+    public Bitmap getBitmapWithFilterApplied() {
+		return mGPUImage.getBitmapWithFilterApplied();
+	}
+    
+    public void rotate(int degree) {
+    	this.mGPUImage.rotate(degree);
+	}
+    
 }
