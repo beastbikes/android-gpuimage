@@ -147,4 +147,8 @@ public class GPUImageView extends GLSurfaceView {
     	this.mGPUImage.rotate(degree);
 	}
     
+    public void deleteImage(){
+    	this.mGPUImage.deleteImage();
+    }
+    
 }
