@@ -152,10 +152,11 @@ public class GPUImageRenderer implements Renderer, PreviewCallback {
                 GLES20.glGenTextures(1, textures, 0);
                 mSurfaceTexture = new SurfaceTexture(textures[0]);
                 try {
+                	
                     camera.setPreviewTexture(mSurfaceTexture);
                     camera.setPreviewCallback(GPUImageRenderer.this);
                     camera.startPreview();
-                } catch (IOException e) {
+                } catch (Throwable e) {
                     e.printStackTrace();
                 }
             }
